@@ -3,7 +3,7 @@ const { Firestore } = require("@google-cloud/firestore");
 async function getData() {
     const db = new Firestore({ projectId: "submissionmlgc-kemalpasha", databaseId: "(default)" });
 
-    const predictions = db.collection("prediction");
+    const predictions = db.collection("predictions");
     const history = await predictions.get();
     const data = [];
     history.forEach((doc) => {
